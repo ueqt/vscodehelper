@@ -1,0 +1,3 @@
+@echo off
+echo 安装当前目录下所有的 VSCode 扩展组件...
+for %%1 in (*.vsix) do code --install-extension %%1
