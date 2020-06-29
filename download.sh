@@ -4,4 +4,4 @@
 rm -rf extensions;
 mkdir extensions;
 cd extensions
-code --list-extensions --show-versions | gsed -r 's/(.*?)\.(.*?)@(.*)/https:\/\/marketplace.visualstudio.com\/_apis\/public\/gallery\/publishers\/\1\/vsextensions\/\2\/\3\/vspackage -o \1.\2-\3.vsix && /' | tr '\n' ' ' | gsed -r 's/(.*)/curl \1/' | sh
+code --list-extensions --show-versions | gsed -r 's/(.*?)\.(.*?)@(.*)/https:\/\/marketplace.visualstudio.com\/_apis\/public\/gallery\/publishers\/\1\/vsextensions\/\2\/\3\/vspackage -o \1.\2-\3.vsix/' | tr '\n' ' ' | gsed -r 's/(.*)/curl \1/' | sh
